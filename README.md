@@ -19,8 +19,8 @@ Persists specified data between shuffled games. Certain limitations apply, parti
 
 # Setup
 1) Confirm sha1 checksum of ROM is listed in [Bizhwak Shuffler Home]\plugins\pokemon-hashes.dat.
-	1a) If hash not found, either download ROM with a sha1 that does match or follow the remaining 1x) steps to add entry to plugin.
-	1b) If adding a new ROM, enter the following information in the pokemon-hashes.dat file in below format:
+	a) If hash not found, either download ROM with a sha1 that does match or follow the remaining 1x) steps to add entry to plugin.
+	b) If adding a new ROM, enter the following information in the pokemon-hashes.dat file in below format:
 		[SHA1 Hash] [tag] -- [File Name]
 		ie. D7037C83E1AE5B39BDE3C30787637BA1D4C48CE2 pkmnrdbleng -- Pokemon - Blue Version (USA, Europe) (SGB Enhanced).gb
 		
@@ -29,8 +29,7 @@ Persists specified data between shuffled games. Certain limitations apply, parti
 			If you are using a ROM hack that does not alter the RAM Addresses for key information, then you can an already used tag.
 			For instance, if you are using a FireRed English v1.1 ROM hack that just adds information in unused addresses, then [tag] can be pkmnfrlgeng.
 			Otherwise, feel free to make up your own tag.
-	1c) If you had to create a new [tag] in step 1b), add all relevant memory addresses in pokemon-persistent-data.lua, following the format of whichever gen the hack is most closely modeled after.
-		This is the hard part! You'll need to add all relevant metadata for the settings you will be using. For instance, if you are running a Gen 1 ROM hack, you should know all the following addresses:
+	c) If you had to create a new [tag] in step 1b), add all relevant memory addresses in pokemon-persistent-data.lua, following the format of whichever gen the hack is most closely modeled after. This is the hard part! You'll need to add all relevant metadata for the settings you will be using. For instance, if you are running a Gen 1 ROM hack, you should know all the following addresses:
 			gen = 1
 			,inbattle_addr = x
 			,party_addr = 0xD163 -- Party count is first byte
@@ -54,12 +53,12 @@ Persists specified data between shuffled games. Certain limitations apply, parti
 5) Click Open Script (folder icon). This is different than Open Session!
 6) Double-click shortcut of shuffle.lua
 7) If starting a new session, uncheck "Resuming a Session?"
-	7a) If resuming a session, just click Resume Previous Session
+	7) If resuming a session, just click Resume Previous Session
 8) If "Persistent Pokemon Shuffler" isn't listed across from "Setup Plugins" or you wish to change settings from your last session, click "Setup Plugin"
-	8a) Click dropdown list and choose Persistent Pokemon Shuffler Data
-	8b) Check Enabled checkbox
-	8c) Check settings you wish to use; uncheck settings you don'tag
-	8d) Click Save and Close
+	8) Click dropdown list and choose Persistent Pokemon Shuffler Data
+	8) Check Enabled checkbox
+	8) Check settings you wish to use; uncheck settings you don'tag
+	8) Click Save and Close
 9) Click Start New Session
 
 # Data Structures
@@ -107,7 +106,7 @@ Data[tag].metadata: Exact fields in this table will depend on generation of ROM.
 	
 Data[tag].prevvalues: Stores information from previous ROM to be loaded into the RAM of current ROM upon loading
 	{
-		party_count
+	   ,party_count
 	   ,party_values
 	   ,pc_pokemon_values
 	   ,pokedex_values
@@ -154,8 +153,8 @@ Data[tag].prevvalues: Stores information from previous ROM to be loaded into the
 		Currently set up to work with FireRed/LeafGreen. Will expand in future.
 		
 # Future Changes
--Speed up PC Pokemon transfer rate
--Add additional gens (requires RAM Maps and/or decompilations)
--Allow cross-gen transfer of pokemon within ROMs' physical limitations
--Atomize the larger scale data groups (ie. give settings to transfer event flags but not beaten trainer flags)
--Whatever good ideas I hear from others
+- Speed up PC Pokemon transfer rate
+- Add additional gens (requires RAM Maps and/or decompilations)
+- Allow cross-gen transfer of pokemon within ROMs' physical limitations
+- Atomize the larger scale data groups (ie. give settings to transfer event flags but not beaten trainer flags)
+- Whatever good ideas I hear from others
