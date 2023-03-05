@@ -63,7 +63,8 @@ Persists specified data between shuffled games. Certain limitations apply, parti
 9) Click Start New Session
 
 # Data Structures
-## Data Table: Primary structure passed between functions. Leverages built-in persistency of Bizhawk Shuffler.
+## Data Table
+Primary structure passed between functions. Leverages built-in persistency of Bizhawk Shuffler.
 	
 	{
 		tags[hash]		-- Table of tags based on sha1 hash of ROM. Tags group together ROMs with identical (enough) RAM Addresses.
@@ -75,8 +76,8 @@ Persists specified data between shuffled games. Certain limitations apply, parti
 		}
 	}
 	
-## Data[tag].metadata: Exact fields in this table will depend on generation of ROM. Gen 3 example below:
-	
+## Data[tag].metadata
+Exact fields in this table will depend on generation of ROM. Gen 3 example below:	
 	["pkmnfrlgeng"]={ -- FireRed/LeafGreen Version (USA, Europe) (Rev 1).gba
 		gen = 3
 		,inbattle_addr = 0x03003529
@@ -107,8 +108,8 @@ Persists specified data between shuffled games. Certain limitations apply, parti
 		,pc_pokemon_bytes = 33744
 	}
 	
-## Data[tag].prevvalues: Stores information from previous ROM to be loaded into the RAM of current ROM upon loading
-	
+## Data[tag].prevvalues
+Stores information from previous ROM to be loaded into the RAM of current ROM upon loading	
 	{
 	   ,party_count
 	   ,party_values
