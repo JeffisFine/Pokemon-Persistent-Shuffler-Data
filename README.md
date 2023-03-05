@@ -2,17 +2,13 @@
 Plugin for Bizhawk Shuffler 2 that persists specified data between shuffled Pokemon ROMs.
 
 # Introduction
-Persists specified data between shuffled games. Certain limitations apply, particularly between different gens. Those will be specified in each setting's name. 
-This is just a project I picked up for fun on the side to fill time and learn Lua scripting. I'll happily take feedback on the Github, but don't expect professional support.
-Never used GitHub before this, hence the written changelog in this Readme. So cut me some slack.
-I'm not very imaginative, so I have no clue how useful this Shuffler plugin will actually be in a linear, turn-based RPG, but perhaps you can find some interesting challenges or whatever to do with it.
-See bottom of file for nerdy tech stuff.
+Persists specified data between shuffled games. Certain limitations apply, particularly between different gens. Those will be specified in each setting's name. This is just a project I picked up for fun on the side to fill time and learn Lua scripting. I'll happily take feedback on the Github, but don't expect professional support. Never used GitHub before this, hence the written changelog in this Readme. So cut me some slack. I'm not very imaginative, so I have no clue how useful this Shuffler plugin will actually be in a linear, turn-based RPG, but perhaps you can find some interesting challenges or whatever to do with it. See bottom of file for nerdy tech stuff.
 
 # Requirements
--Potato PC or greater
--Bizhawk Emulator
--Bizhawk Shuffler 2
--Pokemon ROMs (initial support for Gens 1-3)
+- Potato PC or greater
+- Bizhawk Emulator
+- Bizhawk Shuffler 2
+- Pokemon ROMs (initial support for Gens 1-3)
 
 # Installation
 1) Download Bizhawk Emulator and Pokemon Roms.
