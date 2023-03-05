@@ -77,7 +77,8 @@ Primary structure passed between functions. Leverages built-in persistency of Bi
 	}
 	
 ## Data[tag].metadata
-Exact fields in this table will depend on generation of ROM. Gen 3 example below:	
+Exact fields in this table will depend on generation of ROM. Gen 3 example below:
+	
 	["pkmnfrlgeng"]={ -- FireRed/LeafGreen Version (USA, Europe) (Rev 1).gba
 		gen = 3
 		,inbattle_addr = 0x03003529
@@ -95,21 +96,20 @@ Exact fields in this table will depend on generation of ROM. Gen 3 example below
 		,item_pocket_offset = 0x0310
 		,item_pocket_bytes = 744
 		,flags_offset = 0x0EE0
-		,flags_bytes = 800
-		
+		,flags_bytes = 800		
 		,save_block_2_pntr = 0x0300500C
 		,xor_key_offset = 0x0F20
 		,pokedex_offset = 0x018
 		,pokedex_bytes = 120
 		,pokedex_seen_offset = 0x44
 		,pokedex_seen_bytes = 52
-		
 		,save_block_3_pntr = 0x03005010
 		,pc_pokemon_bytes = 33744
 	}
 	
 ## Data[tag].prevvalues
-Stores information from previous ROM to be loaded into the RAM of current ROM upon loading	
+Stores information from previous ROM to be loaded into the RAM of current ROM upon loading
+	
 	{
 	   ,party_count
 	   ,party_values
