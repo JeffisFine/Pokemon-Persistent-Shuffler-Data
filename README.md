@@ -8,7 +8,7 @@ Persists specified data between shuffled games. Certain limitations apply, parti
 - Potato PC or greater
 - Bizhawk Emulator
 - Bizhawk Shuffler 2
-- Pokemon ROMs (initial support for Gens 1-3)
+- At least two Pokemon ROMs (initial support for Gens 1-3)
 
 # Installation
 1) Download Bizhawk Emulator and Pokemon Roms.
@@ -18,8 +18,8 @@ Persists specified data between shuffled games. Certain limitations apply, parti
 4) Unzip into [Bizhwak Shuffler Home]\plugins.
 
 # Setup
-1) Confirm sha1 checksum of ROM is listed in [Bizhwak Shuffler Home]\plugins\pokemon-hashes.dat.
-	- If hash not found, either download ROM with a sha1 that does match or follow the remaining 1x) steps to add entry to plugin.
+1) Confirm sha1 checksums of ROMs are listed in [Bizhwak Shuffler Home]\plugins\pokemon-hashes.dat.
+	- If hash not found, either download ROMs with sha1s that do match or follow the remaining 1) steps to add entry to plugin.
 	- If adding a new ROM, enter the following information in the pokemon-hashes.dat file in below format:
 		```
 		[SHA1 Hash] [tag] -- [File Name]
