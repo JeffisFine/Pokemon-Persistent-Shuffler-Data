@@ -96,13 +96,15 @@ Exact fields in this table will depend on generation of ROM. Gen 3 example below
 		,item_pocket_offset = 0x0310
 		,item_pocket_bytes = 744
 		,flags_offset = 0x0EE0
-		,flags_bytes = 800		
+		,flags_bytes = 800
+		
 		,save_block_2_pntr = 0x0300500C
 		,xor_key_offset = 0x0F20
 		,pokedex_offset = 0x018
 		,pokedex_bytes = 120
 		,pokedex_seen_offset = 0x44
 		,pokedex_seen_bytes = 52
+		
 		,save_block_3_pntr = 0x03005010
 		,pc_pokemon_bytes = 33744
 	}
@@ -111,6 +113,7 @@ Exact fields in this table will depend on generation of ROM. Gen 3 example below
 Stores information from previous ROM to be loaded into the RAM of current ROM upon loading
 	
 	{
+	   gen
 	   ,party_count
 	   ,party_values
 	   ,pc_pokemon_values
@@ -123,6 +126,10 @@ Stores information from previous ROM to be loaded into the RAM of current ROM up
 	}
 	
 # Change Log
+- 0.9.0 - 3/11/23:
+	- Made functions compatible with data structures prior to gen 3
+	- Made some preparations for cross-gen functionality (current can only transfer data between same-gen games)
+	- Added test to prevent all but money from transferring over between gens, so games of different gens can be shuffled without crashing
 - 0.8.0 - 3/5/23:
 	- Streamlined data structure (can I stopped fiddling with it now, please?!)
 	- Set stop-gap functions to prevent cross-gen ROM corruption from certain data transfers (ie. Pokemon)
